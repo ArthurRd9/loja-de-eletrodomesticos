@@ -5,7 +5,7 @@
         <title>Produtos - Full Stack Eletro</title>
         <link rel="stylesheet" href="src/estilo.css">       
         <link rel="icon" href="src/imagens/logo.jpeg"> 
-              
+        <script src="js/funcoes.js"></script>      
     </head>
 
     <body>
@@ -28,12 +28,13 @@
         <aside class="categorias">
             <h3>Categorias</h3>
             <ul>
-                <li onclick="exibir_categoria()"> Todos (12) </li>
-                <li>Geladeiras (3)</li>
-                <li>Fogões (2)</li>
-                <li>Micro ondas (3)</li>
-                <li>Máquina de Lavar (2)</li>
-                <li>Lava louças (2)</li>
+                <li onclick="exibir_todos('todos')"> Todos (12) </li>
+                <li onclick="exibir_categoria('geladeira')">Geladeiras (3)</li>
+                <li onclick="exibir_categoria('fogao')">Fogões (2)</li>
+                <li onclick="exibir_categoria('microondas')">Microondas (3)</li>
+                <li onclick="exibir_categoria('lavadora')">Máquina de Lavar (2)</li>
+                <li onclick="exibir_categoria('lavaloucas')">Lava louças (2)</li>
+                
             </ul>
         </aside>
         <!--Fim Categorias-->
@@ -43,8 +44,8 @@
 
                       
 
-            <div class="box_produto" id="geladeira" >
-                <img src="src/imagens produtos/geladeira frost free electrolux.webp" alt="Geladeira"  style="width: 120px;" style="width: 120px;">
+            <div class="box_produto" id="geladeira" style="display:inline-block;">
+                <img src="src/imagens produtos/geladeira frost free electrolux.webp" alt="Geladeira"  style="width: 120px;" style="width: 120px;" onmouseover="destaque(this)" onmouseout="destaque(this)">
                 <br>
                 <p class="descricao">Geladeira Frost Free Electrolux </p>     
                 <p class="descricao">480 litros</p>              
@@ -54,8 +55,8 @@
                 <br>
             </div>
 
-            <div class="box_produto" id="geladeira" >
-                <img src="src/imagens produtos/geladeira frost free eletctrolux inox.webp" alt="Geladeira Frost Free Inox"style="width: 120px;" style="width: 120px;">
+            <div class="box_produto" id="geladeira" style="display:inline-block;">
+                <img src="src/imagens produtos/geladeira frost free eletctrolux inox.webp" alt="Geladeira Frost Free Inox"style="width: 120px;" style="width: 120px; "onmouseover="destaque(this)" onmouseout="destaque(this)">
                 <br>
                 <p class="descricao">Geladeira Frost Free Electrolux</p>
                 <p class="descricao"> 350 litros Inox</p>  
@@ -65,8 +66,8 @@
                 <br>
             </div>
 
-            <div class="box_produto" id="geladeira" >
-                <img src="src/imagens produtos/refrigerador samsung.webp" alt="Geladeira SmartThings" style="width: 120px;">
+            <div class="box_produto" id="geladeira" style="display:inline-block;">
+                <img src="src/imagens produtos/refrigerador samsung.webp" alt="Geladeira SmartThings" style="width: 120px;" onmouseover="destaque(this)" onmouseout="destaque(this)">
                 <br>
                 <p class="descricao">Refrigerador Samsung com SmartThings – 582L</p>
                 <hr>                 
@@ -77,8 +78,8 @@
             </div> 
     
 <!---Fogão-->
-            <div class="box_produto" id="fogao" >
-                 <img src="src/imagens produtos/fogao esmaltec.jpeg" alt="Fogão linha branca" style="width: 120px;">
+            <div class="box_produto" id="fogao" style="display:inline-block;">
+                 <img src="src/imagens produtos/fogao esmaltec.jpeg" alt="Fogão linha branca" style="width: 120px;" onmouseover="destaque(this)" onmouseout="destaque(this)">
                 <br>
                 <p class="descricao">Fogão Esmaltec 4 bocas</p>
                 <hr>                 
@@ -87,8 +88,8 @@
                  <br>
             </div>
 
-            <div class="box_produto" id="fogao" >
-                <img src="src/imagens produtos/fogaoinox.jpeg" width="120px"alt="Fogão Inox" style="width: 120px;">
+            <div class="box_produto" id="fogao" style="display:inline-block;">
+                <img src="src/imagens produtos/fogaoinox.jpeg" width="120px"alt="Fogão Inox" style="width: 120px;" onmouseover="destaque(this)" onmouseout="destaque(this)">
                 <br>
                 <p class="descricao">Fogão Electrolux 4 bocas Inox</p>
                 <hr>                 
@@ -97,28 +98,28 @@
                 <br>
             </div>
 <!--Micro ondas-->
-            <div class="box_produto" id="microondas" >
-                <img src="src/imagens produtos/microondas electrolux.jpeg" alt="Micro ondas branco" style="width: 120px;">
+            <div class="box_produto" id="microondas" style="display:inline-block;">
+                <img src="src/imagens produtos/microondas electrolux.jpeg" alt="Micro ondas branco" style="width: 120px;" onmouseover="destaque(this)" onmouseout="destaque(this)">
                 </p>
-                <p class="descricao">Micro ondas Electrolux 20 litros</p>
+                <p class="descricao">Microondas Electrolux 20 litros</p>
                 <hr>                 
                 <p class="valor1">RS 500,00</p>
                 <p class="valor2">R$ 419,90</p>
                 <br>
             </div>
 
-            <div class="box_produto" id="microondas" >
-                <img src="src/imagens produtos/lavalouças brastemp.jpeg" alt="Micro ondas inox" style="width: 120px;">
+            <div class="box_produto" id="microondas" style="display:inline-block;">
+                <img src="src/imagens produtos/lavalouças brastemp.jpeg" alt="Micro ondas inox" style="width: 120px;" onmouseover="destaque(this)" onmouseout="destaque(this)">
                 </p>
-                <p class="descricao"> Micro ondas Brastemp Inox  30 litros </p>
+                <p class="descricao"> Microondas Brastemp Inox  30 litros </p>
                 <hr>                 
                 <p class="valor1">R$ 809,90</p>
                 <p class="valor2">R$ 519,90</p>
                 <br>
             </div>
 
-            <div class="box_produto" id="microondas" >
-                <img src="src/imagens produtos/microondas philco.jpg" alt="Micro ondas inox e preto" style="width: 120px;">
+            <div class="box_produto" id="microondas" style="display:inline-block;">
+                <img src="src/imagens produtos/microondas philco.jpg" alt="Micro ondas inox e preto" style="width: 120px;" onmouseover="destaque(this)" onmouseout="destaque(this)">
                 </p>
                 <p class="descricao">Microondas Philco 25 Litros Preto Com Inox</p>
                 <hr>                 
@@ -127,8 +128,8 @@
                 <br>
             </div>
 <!---Lava louça-->
-            <div class="box_produto" id="lavaloucas" >
-                <img src="src/imagens produtos/lavalouças eletrolux.jpeg" alt="Lava Louças inox" style="width: 120px;">
+            <div class="box_produto" id="lavaloucas" style="display:inline-block;">
+                <img src="src/imagens produtos/lavalouças eletrolux.jpeg" alt="Lava Louças inox" style="width: 120px;" onmouseover="destaque(this)" onmouseout="destaque(this)">
                 </p>
                 <p class="descricao">Lava-Louças Electrolux com Display Digital - Inox</p>
                 <hr>                 
@@ -137,8 +138,8 @@
                 <br>
             </div>
 
-            <div class="box_produto" id="lavaloucas" >
-                <img src="src/imagens produtos/lavalouças brastemp.jpeg" alt="Lava Louças Branca" style="width: 120px;">
+            <div class="box_produto" id="lavaloucas" style="display:inline-block;">
+                <img src="src/imagens produtos/lavalouças brastemp.jpeg" alt="Lava Louças Branca" style="width: 120px;" onmouseover="destaque(this)" onmouseout="destaque(this)">
                 </p>
                 <p class="descricao"> Lava Louça Compacta 8 Serviços Branca - Brastemp </p>
                 <hr>                 
@@ -147,8 +148,8 @@
                 <br>
             </div>
 <!--Máquina de lavar-->
-            <div class="box_produto"id="lavadora" >  
-                 <img  src="src/imagens produtos/maquinadelavar electrolux.jpeg" alt="Máquina de lavar e secar" style="width: 120px;">
+            <div class="box_produto"id="lavadora" style="display:inline-block;">  
+                 <img  src="src/imagens produtos/maquinadelavar electrolux.jpeg" alt="Máquina de lavar e secar" style="width: 120px;" onmouseover="destaque(this)" onmouseout="destaque(this)">
                 </p>
                 <p class="descricao">Máquina de lavar e secar Electrolux 10 kg
                 <hr>                 
@@ -157,8 +158,8 @@
                 <br>
             </div>  
             
-            <div class="box_produto" id="lavadora" >
-                <img src="src/imagens produtos/maquinadelavar brastemp.webp" alt="Geladeira Inox" style="width: 120px;" style="width: 120px;">
+            <div class="box_produto" id="lavadora" style="display:inline-block;">
+                <img src="src/imagens produtos/maquinadelavar brastemp.webp" alt="Geladeira Inox" style="width: 120px;" style="width: 120px;" onmouseover="destaque(this)" onmouseout="destaque(this)">
                  <p class="descricao">Máquina de lavar 15 kg Brastemp</p>     
                 <hr>                
                 <p class="valor1">R$ 4.299,00</p>                    
@@ -175,7 +176,7 @@
         <footer id="rodape">
             <hr>            
             <p id="forma_pagamento">Formas de pagamento<p>            
-            <img class="pagamento" src="./imagem/cartao.jpeg" alt="Formas de pagamento">
+            <img class="pagamento" src="src/imagens/cartao.jpeg" alt="Formas de pagamento">
             <p>&copy; Arthur Rodrigues</p>
         </footer>
    
